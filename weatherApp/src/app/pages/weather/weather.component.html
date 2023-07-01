@@ -6,6 +6,9 @@
       <button type="button" (click)="getWeather()">Get Weather</button>
   </form>
 
+
+
+
   <div *ngIf="weatherData">
     <h2>{{weatherData.name}}</h2>
     <p>Temperature : {{weatherData.main.temp}}</p>
@@ -19,14 +22,42 @@
 
 
 
-<div class="container-fluid px-1 px-md-4 py-5 mx-auto">
+<!-- <div class="container-fluid px-1 px-md-4 py-5 mx-auto">
   <div class="row d-flex justify-content-center px-3 ">
+
       <div class="card text-white my-autor text-center ">
+        <div class="wave-one"></div>
+        <div class="wave-two"></div>
+        <div class="wave-three"></div>
           <h2 class="ml-auto mr-4 mt-3 mb-0">{{weatherData.name}}</h2>
           <p class="ml-auto mr-4 mb-0 med-font">Temperature : {{weatherData.main.temp}}</p>
-          <!-- <h1 class="ml-auto mr-4 large-font">-20&#176;</h1> -->
           <p class="ml-auto mr-4 mb-0 med-font">Humidity : {{weatherData.main.humidity}}</p>
           <p class="ml-4 mb-4">Weather : {{weatherData.weather[0].description}}</p>
       </div>
   </div>
+</div> -->
+
+<div class="row">
+  <div class="col-4"></div>
+  <div class="col-4">
+    <div class="border">
+      <h1>Weather Application</h1>
+
+      <form action="" method="get">
+          <input type="text" name="city" placeholder="Enter city" [(ngModel)]="city">
+          <button type="button" (click)="getWeather()">Get Weather</button>
+      </form>
+    <div class='box'>
+      <div class='wave -one'></div>
+      <div class='wave -two'></div>
+      <div class='wave -three'></div>
+      <div class='title'>
+        <h2 class="ml-auto mr-4 mt-3 mb-0">{{weatherData.name}}</h2>
+        <p class="ml-auto mr-4 mb-0 med-font">Temperature : {{weatherData.main.temp}}</p>
+        <p class="ml-auto mr-4 mb-0 med-font">Humidity : {{weatherData.main.humidity}}</p>
+        <p class="ml-4 mb-4">Weather : {{weatherData.weather[0].description}}</p></div>
+    </div>
+    </div>
+  </div>
+  <div class="col-4"></div>
 </div>
